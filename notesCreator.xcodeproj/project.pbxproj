@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EA228041885F2620081FE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA228031885F2620081FE7E /* Foundation.framework */; };
+		0EA228061885F2620081FE7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA228051885F2620081FE7E /* UIKit.framework */; };
+		0EA2280F1885F2620081FE7E /* notesCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2280E1885F2620081FE7E /* notesCreator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EA228001885F2620081FE7E /* notesCreator.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = notesCreator.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA228031885F2620081FE7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0EA228051885F2620081FE7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0EA2280A1885F2620081FE7E /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		0EA2280B1885F2620081FE7E /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		0EA2280D1885F2620081FE7E /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		0EA2280E1885F2620081FE7E /* notesCreator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = notesCreator.m; sourceTree = "<group>"; };
+		0EA228131885F2620081FE7E /* notesCreator.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = notesCreator.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/notesCreator.plist; sourceTree = "<group>"; };
+		0EA228171885F2620081FE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Package/Library/Activator/Listeners/isklikas.notesCreator/Info.plist; sourceTree = "<group>"; };
+		0EA228181885F2630081FE7E /* Icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-small.png"; path = "Package/Library/Activator/Listeners/isklikas.notesCreator/Icon-small.png"; sourceTree = "<group>"; };
+		0EA228191885F2630081FE7E /* Icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-small@2x.png"; path = "Package/Library/Activator/Listeners/isklikas.notesCreator/Icon-small@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EA227FC1885F2620081FE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EA228041885F2620081FE7E /* Foundation.framework in Frameworks */,
+				0EA228061885F2620081FE7E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EA227F61885F2620081FE7E = {
+			isa = PBXGroup;
+			children = (
+				0EA228071885F2620081FE7E /* notesCreator */,
+				0EA228021885F2620081FE7E /* Frameworks */,
+				0EA228011885F2620081FE7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0EA228011885F2620081FE7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228001885F2620081FE7E /* notesCreator.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EA228021885F2620081FE7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228031885F2620081FE7E /* Foundation.framework */,
+				0EA228051885F2620081FE7E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EA228071885F2620081FE7E /* notesCreator */ = {
+			isa = PBXGroup;
+			children = (
+				0EA2280E1885F2620081FE7E /* notesCreator.m */,
+				0EA228081885F2620081FE7E /* Package */,
+				0EA2280C1885F2620081FE7E /* Supporting Files */,
+			);
+			path = notesCreator;
+			sourceTree = "<group>";
+		};
+		0EA228081885F2620081FE7E /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228091885F2620081FE7E /* DEBIAN */,
+				0EA228101885F2620081FE7E /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		0EA228091885F2620081FE7E /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				0EA2280A1885F2620081FE7E /* control.txt */,
+				0EA2280B1885F2620081FE7E /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		0EA2280C1885F2620081FE7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EA2280D1885F2620081FE7E /* PackageVersion.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EA228101885F2620081FE7E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228111885F2620081FE7E /* MobileSubstrate */,
+				0EA228141885F2620081FE7E /* Activator */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		0EA228111885F2620081FE7E /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228121885F2620081FE7E /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		0EA228121885F2620081FE7E /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228131885F2620081FE7E /* notesCreator.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+		0EA228141885F2620081FE7E /* Activator */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228151885F2620081FE7E /* Listeners */,
+			);
+			name = Activator;
+			sourceTree = "<group>";
+		};
+		0EA228151885F2620081FE7E /* Listeners */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228161885F2620081FE7E /* ___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___ */,
+			);
+			name = Listeners;
+			sourceTree = "<group>";
+		};
+		0EA228161885F2620081FE7E /* ___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___ */ = {
+			isa = PBXGroup;
+			children = (
+				0EA228171885F2620081FE7E /* Info.plist */,
+				0EA228181885F2630081FE7E /* Icon-small.png */,
+				0EA228191885F2630081FE7E /* Icon-small@2x.png */,
+			);
+			name = "___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0EA227FD1885F2620081FE7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0EA227FF1885F2620081FE7E /* notesCreator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EA2281C1885F2630081FE7E /* Build configuration list for PBXNativeTarget "notesCreator" */;
+			buildPhases = (
+				0EA227FB1885F2620081FE7E /* Sources */,
+				0EA227FC1885F2620081FE7E /* Frameworks */,
+				0EA227FD1885F2620081FE7E /* Headers */,
+				0EA227FE1885F2620081FE7E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = notesCreator;
+			productName = notesCreator;
+			productReference = 0EA228001885F2620081FE7E /* notesCreator.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EA227F71885F2620081FE7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 0EA227FA1885F2620081FE7E /* Build configuration list for PBXProject "notesCreator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0EA227F61885F2620081FE7E;
+			productRefGroup = 0EA228011885F2620081FE7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EA227FF1885F2620081FE7E /* notesCreator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EA227FE1885F2620081FE7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EA227FB1885F2620081FE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EA2280F1885F2620081FE7E /* notesCreator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0EA2281A1885F2630081FE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		0EA2281B1885F2630081FE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		0EA2281D1885F2630081FE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		0EA2281E1885F2630081FE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EA227FA1885F2620081FE7E /* Build configuration list for PBXProject "notesCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EA2281A1885F2630081FE7E /* Debug */,
+				0EA2281B1885F2630081FE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EA2281C1885F2630081FE7E /* Build configuration list for PBXNativeTarget "notesCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EA2281D1885F2630081FE7E /* Debug */,
+				0EA2281E1885F2630081FE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EA227F71885F2620081FE7E /* Project object */;
+}

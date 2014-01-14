@@ -1,0 +1,17 @@
+Package: isklikas.notesCreator
+Name: notesCreator
+Version: 0.1-1
+Description: 
+Section: System
+Depends: firmware (>= 5.0), mobilesubstrate, libactivator
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Yannis
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon: 
+
