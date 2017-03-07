@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "Configuration";
+"title" = "Champ Titre Au-dessus";
+"autokey" = "Auto-déclenchement du Clavier";
+"scancel" = "Enregistrer en Annulant";
+"scancelinfo" = "Enregistrer en Annulant vous permet de conserver le texte lorsque vous annulez. Cela veut dire que vous pouvez annuler et continuer à écrire lorsque vous rouvrez NoteCreator";

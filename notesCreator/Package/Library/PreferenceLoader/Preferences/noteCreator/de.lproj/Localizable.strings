@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "Konfiguration";
+"title" = "Titelfeld anzeigen";
+"autokey" = "Tastatur öffnen";
+"scancel" = "Bei Abbruch merken";
+"scancelinfo" = "Bei Abbruch merken ermöglicht den eingegebenen Text zwischenzuspeichern. Das bedeutet das nach dem beenden von NoteCreator mit 'Abbruch', beim nächsten öffnen der Text wieder angezeigt wird";

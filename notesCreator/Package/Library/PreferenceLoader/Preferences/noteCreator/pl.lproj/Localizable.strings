@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "Konfiguracja";
+"title" = "Pole tytułowe powyżej";
+"autokey" = "Wysunięcie klawiatury";
+"scancel" = "Zapisz anulując";
+"scancelinfo" = "Funkcja Zapisz anulując zachowuje tekst po anulowaniu wpisywania. Oznacza go, że możesz anulować, a następnie kontynuować wpisywanie tekstu po ponownym otwarciu programu NoteCreator";

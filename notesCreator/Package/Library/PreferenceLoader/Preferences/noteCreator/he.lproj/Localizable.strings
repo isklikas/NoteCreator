@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "הגדרות";
+"title" = "כותרת עליונה";
+"autokey" = "הצגת מקלדת בהפעלה";
+"scancel" = "שמירה בלחיצה על ביטול";
+"scancelinfo" = "השהייה בכתיבת הפתק. מאפשר המשך כתיבה של אותו הפתק גם בפתיחה מחדש של התוסף";

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "Configuratie";
+"title" = "Titel veld boven op";
+"autokey" = "Auto Trekker Toetsenboord";
+"scancel" = "Save op cancel";
+"scancelinfo" = "Save op Cancel laat tekst staan, als wordt gecanceled. Dit betekend dat als je canceled en doorgaat met schrijven als je NoteCreator heropent";

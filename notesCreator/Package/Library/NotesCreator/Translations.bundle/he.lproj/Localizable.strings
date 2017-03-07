@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"Cancel" = "ביטול";
+"Done" = "סיום";
+"Note" = "פתק";
+"Account" = "חשבון";
+"Default" = "ברירת מחדל";
+"Title" = "כותרת";
+"Omiphone" = "שמירה באייפון שלי";
+"Omipad" = "שמירה באייפד שלי";
+"Omitouch" = "שמירה באייפד טא'צ שלי";
+"Back" = "חזור";

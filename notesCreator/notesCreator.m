@@ -3,33 +3,35 @@
 //  notesCreator
 //
 //  Created by Yannis on 14/01/14.
-//  Copyright (c) 2014 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2014 isklikas. All rights reserved.
 //
 
 // LibActivator by Ryan Petrich
 // See https://github.com/rpetrich/libactivator
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <libactivator/libactivator.h>
+#import "notesCreator.h"
+UINavigationController *navigationController;
+UIWindow *popUp;
+UIWindow *prevWin;
 
-#error iOSOpenDev post-project creation from template requirements (remove these lines after completed) -- \
- Link to libactivator.dylib: \
- (1) go to TARGETS > Build Phases > Link Binary With Libraries and add /opt/iOSOpenDev/lib/libactivator.dylib
+@interface notesCreator ()
 
-@interface notesCreator : NSObject<LAListener, UIAlertViewDelegate> {
-@private
-	UIAlertView *av;
-}
 @end
 
 @implementation notesCreator
 
+
 - (BOOL)dismiss
 {
-	if (av)
+	if (popUp)
 	{
-		[av dismissWithClickedButtonIndex:[av cancelButtonIndex] animated:YES];
+        [popUp setHidden:TRUE];
+        [popUp endEditing:YES];
+        [popUp resignFirstResponder];
+        popUp = nil;
+        if (prevWin) {
+            [prevWin makeKeyAndVisible];
+        }
 		return YES;
 	}
 	return NO;
@@ -43,8 +45,18 @@
 {
 	if (![self dismiss])
 	{
-		av = [[UIAlertView alloc] initWithTitle:@"notesCreator" message:[event name] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-		[av show];
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
+        popUp = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        popUp.windowLevel = UIWindowLevelAlert+1;
+        popUp.userInteractionEnabled = YES;
+        NoteController *notes = [[NoteController alloc] init];
+        navigationController = [[UINavigationController alloc] initWithRootViewController:notes];
+        popUp.rootViewController = navigationController;
+        prevWin = [[UIApplication sharedApplication] keyWindow];
+        [prevWin setUserInteractionEnabled:TRUE];
+        [popUp makeKeyAndVisible];
 		[event setHandled:YES];
 	}
 }
@@ -65,8 +77,9 @@
 {
 	// Called when the home button is pressed.
 	// If showing UI, then dismiss it and call setHandled:.
-	if ([self dismiss])
-		[event setHandled:YES];
+    //[self dismiss];
+	//if ([self dismiss])
+	//	[event setHandled:YES];
 }
 
 
