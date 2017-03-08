@@ -6,7 +6,7 @@ NoteAccountController.m_CFLAGS = -fobjc-arc
 NoteController.m_CFLAGS = -fobjc-arc
 LineCreator.m_CFLAGS = -fobjc-arc
 NoteCreator_LIBRARIES = activator
-NoteCreator_FRAMEWORKS = UIKit
+NoteCreator_FRAMEWORKS = UIKit CoreGraphics
 BUNDLE_NAME = com.isklikas.NoteCreator
 com.isklikas.NoteCreator_INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries
 
