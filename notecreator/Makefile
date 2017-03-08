@@ -1,9 +1,16 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = NoteCreator
-NoteCreator_FILES = Event.xm
+NoteCreator_FILES = NoteCreator.xm NoteAccountController.m NoteController.m LineCreator.m
+NoteAccountController.m_CFLAGS = -fobjc-arc
+NoteController.m_CFLAGS = -fobjc-arc
+LineCreator.m_CFLAGS = -fobjc-arc
 NoteCreator_LIBRARIES = activator
+NoteCreator_FRAMEWORKS = UIKit
+BUNDLE_NAME = com.isklikas.NoteCreator
+com.isklikas.NoteCreator_INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries
 
+include $(THEOS)/makefiles/bundle.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 internal-stage::
@@ -12,3 +19,5 @@ internal-stage::
 
 after-install::
 	install.exec "killall -9 SpringBoard"
+SUBPROJECTS += notecreatorprefs
+include $(THEOS_MAKE_PATH)/aggregate.mk

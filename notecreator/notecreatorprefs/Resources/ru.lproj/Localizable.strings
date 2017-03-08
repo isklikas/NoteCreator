@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "Конфигурация";
+"title" = "Заголовок";
+"autokey" = "Авто включение клавиатуры";
+"scancel" = "Сохранить при отмене";
+"scancelinfo" = "Функция Сохранить при отмене позволяет вам продолжить набирать текст при повторном открытии NoteCreator";

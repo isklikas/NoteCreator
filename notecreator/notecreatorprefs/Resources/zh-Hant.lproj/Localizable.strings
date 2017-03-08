@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "設定";
+"title" = "標題欄在上";
+"autokey" = "自動顯示鍵盤";
+"scancel" = "取消時儲存";
+"scancelinfo" = "'取消時儲存'允許在取消時保存文字，再開啟 NoteCreator 時可繼續之前的編輯。";

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"Cancel" = "Avbryt";
+"Done" = "Ferdig";
+"Note" = "Notat";
+"Account" = "Konto";
+"Default" = "Standard";
+"Title" = "Tittel";
+"Omiphone" = "På iPhone";
+"Omipad" = "På iPad";
+"Omitouch" = "På iPod Touch";
+"Back" = "Tilbake";

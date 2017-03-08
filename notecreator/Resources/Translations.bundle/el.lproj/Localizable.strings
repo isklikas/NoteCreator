@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 18/01/14.
+
+ */
+
+"Cancel" = "Ακύρωση";
+"Done" = "Τέλος";
+"Note" = "Σημείωση";
+"Account" = "Λογαριασμός";
+"Default" = "Προεπιλογή";
+"Title" = "Τίτλος";
+"Omiphone" = "Στο iPhone μου";
+"Omipad" = "Στο iPad μου";
+"Omitouch" = "Στο iPod Touch μου";
+"Back" = "Πίσω";
+
+

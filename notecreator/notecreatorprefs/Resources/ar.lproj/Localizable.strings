@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  notesCreator
+
+  Created by Yannis on 1/18/14.
+
+*/
+
+"configuration" = "تعديل";
+"title" = "خانة العنوان في الأعلى";
+"autokey" = "تفعيل تلقائي للوحة المفاتيح";
+"scancel" = "حفظ عند الإلغاء";
+"scancelinfo" = "NoteCreator حفظ عند الإلغاء يسمح لك بإبقاء النص عند الإلغاء. هذا يعني أنه بإمكانك الإلغاء ومتابعة الكتابة حالما تعيد فتح";
