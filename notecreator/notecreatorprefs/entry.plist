@@ -11,11 +11,11 @@
 		<key>detail</key>
 		<string>prefsRootListController</string>
 		<key>icon</key>
-		<string>icon.png</string>
+		<string>Note.png</string>
 		<key>isController</key>
 		<true/>
 		<key>label</key>
-		<string>NoteCreatorPrefs</string>
+		<string>NoteCreator</string>
 	</dict>
 </dict>
 </plist>
