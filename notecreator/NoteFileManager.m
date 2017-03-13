@@ -28,4 +28,11 @@
 		return path;
 }
 
+- (NSString *) localisedString:(NSString *)string {
+	  NSString *bPath = [self objectOfNameAtBundle:@"Translations.bundle"];
+    NSBundle *ourBundle = [[NSBundle alloc] initWithPath:bPath];
+    NSString *localisedString = NSLocalizedStringFromTableInBundle(string, nil, ourBundle, nil);
+    return localisedString;
+}
+
 @end
