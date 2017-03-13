@@ -1,5 +1,4 @@
 #import "NoteCreator.h"
-UINavigationController *navigationController;
 UIWindow *popUp;
 UIWindow *prevWin;
 
@@ -42,9 +41,8 @@ static NSString *NoteCreator_eventName = @"isklikas.noteCreator";
         popUp = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         popUp.windowLevel = UIWindowLevelAlert+1;
         popUp.userInteractionEnabled = YES;
-        NoteController *notes = [[NoteController alloc] init];
-        navigationController = [[UINavigationController alloc] initWithRootViewController:notes];
-        popUp.rootViewController = navigationController;
+        NoteScreenContainer *container = [[NoteScreenContainer alloc] init];
+        popUp.rootViewController = container;
         prevWin = [[UIApplication sharedApplication] keyWindow];
         [prevWin setUserInteractionEnabled:TRUE];
         [popUp makeKeyAndVisible];
@@ -99,7 +97,7 @@ static NSString *NoteCreator_eventName = @"isklikas.noteCreator";
 	if (LASharedActivator.isRunningInsideSpringBoard) {
 		[LASharedActivator unregisterEventDataSourceWithEventName:NoteCreator_eventName];
 	}
-	[super dealloc];
+	//[super dealloc];
 }
 
 - (NSString *)localizedTitleForEventName:(NSString *)eventName {

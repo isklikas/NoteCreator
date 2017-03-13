@@ -4,6 +4,7 @@
 #include <dispatch/dispatch.h>
 //#import "Notes/Notes.h"
 #import "NoteController.h"
+#import "NoteScreenContainer.h"
 
 @interface NoteCreator : NSObject<LAListener, UIAlertViewDelegate> {
 @private
