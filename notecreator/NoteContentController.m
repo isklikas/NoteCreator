@@ -63,7 +63,7 @@
             [NSException raise:@"UnknownIndexException" format:@"Index %ld corresponds to no cell", (long)indexPath.row];
             return nil;
             break;
-		}
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
