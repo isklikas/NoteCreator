@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "NoteFileManager.h"
+#import "NotePrefManager.h"
 
 @interface NoteContentController: UIViewController <UITableViewDataSource, UITableViewDelegate>{}
 

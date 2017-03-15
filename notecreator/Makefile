@@ -1,17 +1,11 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = NoteCreator
-NoteCreator_FILES = NoteCreator.xm NoteAccountController.m NoteController.m LineCreator.m NoteContentController.m NoteFileManager.m NoteScreenContainer.m
-NoteAccountController.m_CFLAGS = -fobjc-arc
-NoteCreator.xm_CFLAGS = -fobjc-arc
-NoteController.m_CFLAGS = -fobjc-arc
-NoteContentController.m_CFLAGS = -fobjc-arc
-NoteFileManager.m_CFLAGS = -fobjc-arc
-NoteScreenContainer.m_CFLAGS = -fobjc-arc
-LineCreator.m_CFLAGS = -fobjc-arc
+NoteCreator_FILES = NoteCreator.xm NoteAccountController.m NoteController.m LineCreator.m NoteContentController.m NoteFileManager.m NoteScreenContainer.m NotePrefManager.m
 NoteCreator_LIBRARIES = activator
 NoteCreator_FRAMEWORKS = UIKit CoreGraphics
 BUNDLE_NAME = com.isklikas.NoteCreator
+ADDITIONAL_OBJCFLAGS = -fobjc-arc
 com.isklikas.NoteCreator_INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries
 
 include $(THEOS)/makefiles/bundle.mk

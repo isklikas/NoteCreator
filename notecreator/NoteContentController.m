@@ -35,6 +35,12 @@
  	  //navigationController = [[UINavigationController alloc] initWithRootViewController:notes];
  }
  
+ - (void) done:(id) sender {
+ 	}
+ 
+ - (void) cancel:(id) sender {
+ 	}
+ 
  //Table View Data Source Methods
  - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

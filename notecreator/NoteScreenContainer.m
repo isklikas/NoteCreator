@@ -23,6 +23,8 @@
         lineHeight = 1;
     }
     self.noteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, widthv, heightv)];
+		self.noteView.layer.cornerRadius = 5;
+    self.noteView.layer.masksToBounds = YES;
     //[self.noteView setBackgroundColor:[UIColor whiteColor]];
 		[self.view addSubview:self.noteView];
 		NoteContentController *content = [[NoteContentController alloc] init];
