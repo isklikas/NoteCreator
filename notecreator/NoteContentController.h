@@ -3,6 +3,7 @@
 #import "NotePrefManager.h"
 
 @interface NoteContentController: UIViewController <UITableViewDataSource, UITableViewDelegate>{}
+@property UITableView *tblView;
 
 //We will be creating a static Table View, so we will have a property for every cell and its view.
 @property UITableViewCell *titleCell;

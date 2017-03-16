@@ -6,7 +6,7 @@
 @implementation NotePrefManager
 
 - (BOOL)titleEnabled {
-	  BOOL titleEnabled = [[[self preferencesDictionary] objectForKey:@"SwitchCell6"] boolValue];
+		BOOL titleEnabled = [[[self preferencesDictionary] objectForKey:@"SwitchCell6"] boolValue];
 		return titleEnabled;
 }
 
