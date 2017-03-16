@@ -1,4 +1,5 @@
-#import "NoteContentController.h"
+#import "NoteScreenContainer.h" //It has both class definitions and is needed for the quit method
+
 
 @interface NoteContentController()
 @end
@@ -9,15 +10,19 @@
 - (void)loadView {
     [super loadView];
     NotePrefManager *prefManager = [[NotePrefManager alloc] init];
+    NoteFileManager *fileManager = [[NoteFileManager alloc] init];
     if ([prefManager titleEnabled]) {
       self.titleCell = [[UITableViewCell alloc] init];
       self.titleField = [[UITextField alloc] initWithFrame:self.titleCell.frame];
-      [self.titleField setBackgroundColor:[UIColor greenColor]];
+      [self.titleField setDelegate:self];
+      [self.titleField setPlaceholder:[fileManager localisedString:@"Title"]];
       [self.titleCell addSubview:_titleField];
+      [self.titleCell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     self.noteCell = [[UITableViewCell alloc] init];
     self.noteView = [[UITextView alloc] initWithFrame:self.noteCell.frame];
-    [self.noteView setBackgroundColor:[UIColor orangeColor]];
+    [self.noteCell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [self.noteView setDelegate:self];
     [self.noteCell addSubview:_noteView];
     self.accountCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"AccountCell"];
     self.accountCell.textLabel.text = @"Accounts";
@@ -43,12 +48,39 @@
     tblView.scrollEnabled = FALSE;
 		[self.view addSubview:tblView];
      _tblView = tblView;
+     [self setupConstraints];
+}
+
+- (void)setupConstraints {
+    NotePrefManager *prefManager = [[NotePrefManager alloc] init];
+    if ([prefManager titleEnabled]) {
+        [self.titleField setTranslatesAutoresizingMaskIntoConstraints:NO];
+        NSLayoutConstraint *width =[NSLayoutConstraint constraintWithItem:self.titleField attribute:NSLayoutAttributeWidth relatedBy:0 toItem:self.titleCell attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
+        NSLayoutConstraint *height =[NSLayoutConstraint constraintWithItem:self.titleField attribute:NSLayoutAttributeHeight relatedBy:0 toItem:self.titleCell attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.titleField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.titleCell attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.f];
+        NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.titleField attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.titleCell attribute:NSLayoutAttributeLeading multiplier:1.0f constant:0.f];
+        [self.titleCell addConstraint:width];
+        [self.titleCell addConstraint:height];
+        [self.titleCell addConstraint:top];
+        [self.titleCell addConstraint:leading];
+    }
+    [self.noteView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSLayoutConstraint *width =[NSLayoutConstraint constraintWithItem:self.noteView attribute:NSLayoutAttributeWidth relatedBy:0 toItem:self.noteCell attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
+    NSLayoutConstraint *height =[NSLayoutConstraint constraintWithItem:self.noteView attribute:NSLayoutAttributeHeight relatedBy:0 toItem:self.noteCell attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.noteView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.noteCell attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.f];
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.noteView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.noteCell attribute:NSLayoutAttributeLeading multiplier:1.0f constant:0.f];
+    [self.noteCell addConstraint:width];
+    [self.noteCell addConstraint:height];
+    [self.noteCell addConstraint:top];
+    [self.noteCell addConstraint:leading];
 }
 
 - (void) done:(id) sender {
+    [(NoteScreenContainer *)[self parentViewController] quitNoteCreator];
 }
 
 - (void) cancel:(id) sender {
+    [(NoteScreenContainer *)[self parentViewController] quitNoteCreator];
 }
 
 //Table View Data Source Methods
@@ -95,21 +127,12 @@
     switch (indexPath.row) {
         case 0:
             if (rows == 3) {
-                CGRect tFrame = self.titleField.frame;
-                tFrame.size.height = 44;
-                [self.titleField setFrame:tFrame];
                 return 44;
             }
-            CGRect nFrame = self.noteView.frame;
-            nFrame.size.height = tblHeight-44;
-            [self.noteView setFrame:nFrame];
             return tblHeight-44;
             break;
         case 1:
             if (rows == 3) {
-                CGRect nFrame = self.noteView.frame;
-                nFrame.size.height = tblHeight-88;
-                [self.noteView setFrame:nFrame];
                 return tblHeight-88;
             }
             return 44;

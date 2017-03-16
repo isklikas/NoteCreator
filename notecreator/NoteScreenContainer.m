@@ -1,4 +1,6 @@
 #import "NoteScreenContainer.h"
+UIWindow *popUp;
+UIWindow *prevWin;
 
 @interface NoteScreenContainer()
 @end
@@ -38,6 +40,21 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	  self.noteView.center = self.view.center;
+}
+
+- (void)quitNoteCreator {
+	[UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+		self.noteView.alpha = 0.0f;
+	}
+  completion:^(BOOL finished) {
+      [popUp setHidden:TRUE];
+      [popUp endEditing:YES];
+      [popUp resignFirstResponder];
+      popUp = nil;
+      if (prevWin) {
+          [prevWin makeKeyAndVisible];
+      }
+	}];
 }
 
 @end
